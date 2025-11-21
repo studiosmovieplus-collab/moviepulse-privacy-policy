@@ -3,174 +3,382 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Terms of Service and Privacy Policy for MoviePulse" />
-  <title>Terms of Service & Privacy Policy | MoviePulse</title>
+  <meta name="description" content="Terms of Service and Privacy Policy for MovieDB" />
+  <title>Legal Policies | MovieDB</title>
   <style>
-    body {
-      font-family: "Segoe UI", Roboto, Arial, sans-serif;
-      background-color: #f8f9fa;
-      color: #222;
-      line-height: 1.6;
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+      color: #e0e0e0;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+    
     header {
-      background-color: #141414;
-      color: #fff;
+      background: rgba(20, 20, 30, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 3rem 2rem;
       text-align: center;
-      padding: 2rem 1rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     }
+    
     header h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
-    main {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 2rem;
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    h2 {
-      color: #111;
-      margin-top: 2rem;
-      border-bottom: 2px solid #eee;
-      padding-bottom: 0.5rem;
-    }
-    p, li {
-      font-size: 1rem;
+      font-size: 2.8rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
       margin-bottom: 0.5rem;
     }
-    ul {
-      margin-left: 1.5rem;
+    
+    .subtitle {
+      color: #a0a0b0;
+      font-size: 0.95rem;
+      letter-spacing: 0.5px;
     }
-    footer {
-      background: #f0f0f0;
-      text-align: center;
-      padding: 1.5rem;
-      color: #555;
-      font-size: 0.9rem;
+    
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
     }
-    a {
-      color: #0073e6;
+    
+    nav a {
+      color: #667eea;
       text-decoration: none;
+      padding: 0.5rem 1.5rem;
+      border: 2px solid #667eea;
+      border-radius: 25px;
+      transition: all 0.3s ease;
+      font-weight: 500;
     }
+    
+    nav a:hover {
+      background: #667eea;
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+    }
+    
+    main {
+      max-width: 1000px;
+      margin: 3rem auto;
+      padding: 0 2rem 3rem;
+    }
+    
+    .section {
+      background: rgba(30, 30, 45, 0.8);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 3rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+    }
+    
+    .section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+    }
+    
+    h2 {
+      color: #fff;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 3px solid;
+      border-image: linear-gradient(90deg, #667eea, #764ba2) 1;
+      display: inline-block;
+    }
+    
+    h3 {
+      color: #b8b8d1;
+      font-size: 1.3rem;
+      margin: 2rem 0 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    h3::before {
+      content: "▹";
+      color: #667eea;
+      font-size: 1.5rem;
+    }
+    
+    p {
+      color: #c0c0d0;
+      margin-bottom: 1.2rem;
+      font-size: 1.05rem;
+    }
+    
+    ul {
+      margin: 1rem 0 1.5rem 2rem;
+    }
+    
+    li {
+      color: #c0c0d0;
+      margin-bottom: 0.8rem;
+      padding-left: 0.5rem;
+      position: relative;
+    }
+    
+    li::marker {
+      color: #667eea;
+    }
+    
+    a {
+      color: #667eea;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      border-bottom: 1px solid transparent;
+    }
+    
     a:hover {
-      text-decoration: underline;
+      color: #8b9ce8;
+      border-bottom-color: #8b9ce8;
     }
-    @media (max-width: 600px) {
+    
+    strong {
+      color: #fff;
+      font-weight: 600;
+    }
+    
+    .contact-box {
+      background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+      border: 2px solid rgba(102, 126, 234, 0.3);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      display: inline-block;
+    }
+    
+    .contact-box a {
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+    
+    footer {
+      background: rgba(20, 20, 30, 0.95);
+      backdrop-filter: blur(10px);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      text-align: center;
+      padding: 2.5rem 2rem;
+      color: #a0a0b0;
+      font-size: 0.95rem;
+    }
+    
+    footer p {
+      margin: 0.5rem 0;
+      color: #a0a0b0;
+    }
+    
+    .badge {
+      display: inline-block;
+      background: rgba(102, 126, 234, 0.2);
+      color: #667eea;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-left: 0.5rem;
+    }
+    
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      
+      nav {
+        gap: 1rem;
+      }
+      
+      nav a {
+        padding: 0.4rem 1rem;
+        font-size: 0.9rem;
+      }
+      
+      .section {
+        padding: 2rem 1.5rem;
+      }
+      
       main {
-        padding: 1.5rem;
-        margin: 1rem;
+        margin: 2rem auto;
+        padding: 0 1rem 2rem;
+      }
+      
+      h2 {
+        font-size: 1.6rem;
+      }
+      
+      h3 {
+        font-size: 1.1rem;
       }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>MoviePulse Legal Policies</h1>
-    <p>Last updated: October 31, 2025</p>
+    <h1>MovieDB</h1>
+    <p class="subtitle">Legal Policies & Information</p>
+    <nav>
+      <a href="#terms">Terms of Service</a>
+      <a href="#privacy">Privacy Policy</a>
+      <a href="#copyright">Copyright</a>
+    </nav>
   </header>
 
   <main>
-    <h2>Terms of Service</h2>
-    <h3>1. Purpose of the App</h3>
-    <p>
-      MoviePulse helps users discover movies and TV shows by providing descriptions, ratings, cast, genres, and release details. 
-      MoviePulse does not host or stream content. It only displays metadata from trusted third-party sources such as 
-      <strong>The Movie Database (TMDb)</strong>.
-    </p>
+    <div class="section" id="terms">
+      <h2>Terms of Service</h2>
+      <p class="subtitle">Last updated: October 31, 2025</p>
 
-    <h3>2. Acceptable Use</h3>
-    <p>
-      You agree not to misuse the app for illegal or malicious purposes. You may not reverse-engineer, copy, or exploit MoviePulse’s services or data.
-    </p>
+      <h3>App Purpose</h3>
+      <p>
+        MovieDB is a discovery platform that provides comprehensive information about movies and TV shows, including descriptions, ratings, cast details, genres, and release information. 
+        <strong>MovieDB is not a streaming service</strong> and does not host or stream any video content. All metadata is sourced from trusted third-party providers, primarily <strong>The Movie Database (TMDb)</strong>.
+      </p>
 
-    <h3>3. Notifications</h3>
-    <p>
-      By granting notification permission, you agree to receive updates about:
-    </p>
-    <ul>
-      <li>New app features or improvements</li>
-      <li>Watchlist reminders and airing alerts</li>
-      <li>General updates about movies and TV shows</li>
-    </ul>
-    <p>You can disable notifications anytime in your device settings.</p>
+      <h3>Acceptable Use</h3>
+      <p>
+        By using MovieDB, you agree to:
+      </p>
+      <ul>
+        <li>Use the app for lawful, informational, and entertainment purposes only</li>
+        <li>Not reverse-engineer, copy, modify, or exploit any part of the app or its services</li>
+        <li>Not attempt to access data or features through unauthorized means</li>
+        <li>Not use the app for any illegal, harmful, or malicious activities</li>
+      </ul>
 
-    <h3>4. Limitation of Liability</h3>
-    <p>
-      MoviePulse provides information “as is” and makes no guarantees about the accuracy or completeness of the data displayed.
-    </p>
+      <h3>Notifications</h3>
+      <p>
+        If you grant notification permissions, you may receive updates about:
+      </p>
+      <ul>
+        <li>New features and app improvements</li>
+        <li>Watchlist reminders and release alerts</li>
+        <li>Trending movies and TV shows</li>
+        <li>Personalized recommendations</li>
+      </ul>
+      <p>You can disable notifications at any time through your device settings.</p>
 
-    <h3>5. Governing Law</h3>
-    <p>
-      These terms are governed by the laws of your country of residence.
-    </p>
+      <h3>Disclaimers</h3>
+      <p>
+        MovieDB provides information "as is" without warranties of any kind. We do not guarantee the accuracy, completeness, or timeliness of the data displayed. The app may experience downtime, errors, or changes without prior notice.
+      </p>
 
-    <h2>Privacy Policy</h2>
-    <h3>1. Data We Collect</h3>
-    <p>
-      MoviePulse does not require user accounts and does not collect personal data by default.
-      If you contact us, we may store your email for support purposes. Analytics and advertising tools (e.g., Google AdMob, Firebase) 
-      may collect anonymized device and usage data. If you enable notifications, a device token may be stored to deliver updates.
-    </p>
+      <h3>Modifications</h3>
+      <p>
+        We reserve the right to modify these terms at any time. Continued use of the app constitutes acceptance of any changes.
+      </p>
+    </div>
 
-    <h3>2. How We Use Data</h3>
-    <ul>
-      <li>To improve app performance and user experience</li>
-      <li>To provide personalized features like watchlists</li>
-      <li>To send notifications about updates and reminders</li>
-      <li>To support advertising that keeps the app free</li>
-    </ul>
+    <div class="section" id="privacy">
+      <h2>Privacy Policy</h2>
 
-    <h3>3. Data Sharing</h3>
-    <p>
-      We never sell your data. Limited sharing may occur with trusted third-party providers such as TMDb or Google AdMob for 
-      analytics and ad delivery. These third parties follow their own privacy policies:
-    </p>
-    <ul>
-      <li><a href="https://www.themoviedb.org/privacy-policy" target="_blank">TMDb Privacy Policy</a></li>
-      <li><a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
-    </ul>
+      <h3>Data Collection</h3>
+      <p>
+        MovieDB respects your privacy. <strong>We do not require user accounts</strong> and do not collect personal information by default. However, certain features and integrations may collect limited data:
+      </p>
+      <ul>
+        <li><strong>Analytics Data:</strong> Anonymized usage statistics and device information through services like Firebase or Google Analytics</li>
+        <li><strong>Advertising Data:</strong> Device identifiers for ad delivery through Google AdMob</li>
+        <li><strong>Notification Tokens:</strong> If you enable notifications, a device token is stored to deliver updates</li>
+        <li><strong>Support Correspondence:</strong> If you contact us, we may retain your email address for support purposes</li>
+        <li><strong>Local Storage:</strong> Watchlists and preferences are stored locally on your device</li>
+      </ul>
 
-    <h3>4. User Rights</h3>
-    <ul>
-      <li>Request deletion of any personal data we hold (e.g., support emails)</li>
-      <li>Opt out of analytics if applicable</li>
-      <li>Disable notifications anytime in your device settings</li>
-    </ul>
+      <h3>How We Use Data</h3>
+      <p>Any data collected is used to:</p>
+      <ul>
+        <li>Improve app performance, features, and user experience</li>
+        <li>Provide personalized content and recommendations</li>
+        <li>Deliver notifications about updates and reminders</li>
+        <li>Support advertising that keeps the app free to use</li>
+        <li>Respond to support requests and troubleshoot issues</li>
+      </ul>
 
-    <h3>5. Contact</h3>
-    <p>
-      📧 <a href="mailto:studiosmovieplus@gmail.com">studiosmovieplus@gmail.com</a>
-    </p>
+      <h3>Data Sharing</h3>
+      <p>
+        <strong>We never sell your personal data.</strong> Limited data sharing occurs only with trusted third-party service providers:
+      </p>
+      <ul>
+        <li><strong>TMDb:</strong> For movie and TV show information retrieval - <a href="https://www.themoviedb.org/privacy-policy" target="_blank">TMDb Privacy Policy</a></li>
+        <li><strong>Google (AdMob, Firebase):</strong> For analytics and advertising - <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
+      </ul>
+      <p>These third parties operate under their own privacy policies and data protection standards.</p>
 
-    <h2>Copyright Policy</h2>
-    <h3>1. Content Ownership</h3>
-    <p>
-      All movie and TV show information is sourced from <strong>The Movie Database (TMDb)</strong>. 
-      We do not claim ownership of this content and display it solely for informational purposes.
-    </p>
+      <h3>Your Rights</h3>
+      <p>You have the right to:</p>
+      <ul>
+        <li>Request deletion of any personal data we hold (such as support emails)</li>
+        <li>Opt out of analytics tracking where applicable</li>
+        <li>Disable notifications through your device settings</li>
+        <li>Access information about what data is collected</li>
+      </ul>
 
-    <h3>2. User Responsibility</h3>
-    <p>
-      MoviePulse is for informational and educational use only. Users are responsible for how they use the data provided.
-    </p>
+      <h3>Children's Privacy</h3>
+      <p>
+        MovieDB is not directed at children under 13. We do not knowingly collect personal information from children. If you believe we have inadvertently collected such information, please contact us immediately.
+      </p>
 
-    <h3>3. Infringement Concerns</h3>
-    <p>
-      If you believe your copyrighted material appears in MoviePulse without authorization, please contact us at:
-    </p>
-    <p>
-      📧 <a href="mailto:studiosmovieplus@gmail.com">studiosmovieplus@gmail.com</a><br>
-      We will review and take appropriate action promptly.
-    </p>
+      <div class="contact-box">
+        <p>📧 Contact us: <a href="mailto:nuchopics@gmail.com">nuchopics@gmail.com</a></p>
+      </div>
+    </div>
+
+    <div class="section" id="copyright">
+      <h2>Copyright Policy</h2>
+
+      <h3>Content Ownership</h3>
+      <p>
+        All movie and TV show metadata, including posters, descriptions, cast information, and ratings, is sourced from <strong>The Movie Database (TMDb)</strong>. 
+        MovieDB does not claim ownership of this content and displays it solely for informational and educational purposes under fair use principles.
+      </p>
+
+      <h3>Intellectual Property</h3>
+      <p>
+        Movie titles, posters, logos, and trademarks are the property of their respective copyright holders and studios. MovieDB does not own or claim rights to any copyrighted materials displayed within the app.
+      </p>
+
+      <h3>User Responsibility</h3>
+      <p>
+        MovieDB is designed for informational, educational, and entertainment purposes only. Users are responsible for how they use the information provided and must comply with applicable copyright laws.
+      </p>
+
+      <h3>Copyright Concerns</h3>
+      <p>
+        If you believe your copyrighted material appears in MovieDB without proper authorization or attribution, please contact us with:
+      </p>
+      <ul>
+        <li>A description of the copyrighted work</li>
+        <li>The location of the material within the app</li>
+        <li>Your contact information</li>
+        <li>A statement of good faith belief that the use is unauthorized</li>
+      </ul>
+
+      <div class="contact-box">
+        <p>📧 Copyright inquiries: <a href="mailto:nuchopics@gmail.com">nuchopics@gmail.com</a></p>
+      </div>
+      <p>We will review all legitimate concerns and take appropriate action promptly.</p>
+    </div>
   </main>
 
   <footer>
-    &copy; 2025 MoviePulse. All rights reserved. <br>
-    This product uses the TMDb API but is not endorsed or certified by TMDb.
+    <p><strong>© 2025 MovieDB</strong> • All rights reserved</p>
+    <p>This product uses the TMDb API but is not endorsed or certified by TMDb.</p>
+    <p style="margin-top: 1rem;">For questions or concerns: <a href="mailto:nuchopics@gmail.com">nuchopics@gmail.com</a></p>
   </footer>
 </body>
 </html>
